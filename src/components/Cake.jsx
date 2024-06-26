@@ -1,6 +1,7 @@
 const Cake = ({singleCake}) => {
     // function for calculating profit
     // function for average rating
+
     const calculateAverageRating = (ratings) => {
         const total = ratings.reduce((agg, rating) => 
             agg + rating, 0
@@ -17,13 +18,8 @@ const Cake = ({singleCake}) => {
 
     return (
         <>
-            <h2>Cake</h2>
-            <h3>Ingredients:</h3>
-            <ul>
-                {populateIngredients(singleCake.ingredients)}
-            </ul>
-            <p>Average Rating: {calculateAverageRating(singleCake.rating)}</p>
-            <p>Bakery Till:</p>
+            <CakesList/>
+            <br />
         </>
     )
 }

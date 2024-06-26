@@ -47,16 +47,23 @@ const BakeryContainer = () => {
         ] 
     )
 
+    const CakesList = () => {
+        return (
+            <div>
+                {CakesList.map((cake, index) => (
+                    <Cake key = {index} singleCake = {cake} />
+                ))}
+            </div>
+        )
+    }
+
     return (
         <>
-        <h2>Cakes:</h2>
-        <ul>
-            <ul><Cake cake = {cakes[0]}/></ul>
-            <ul></ul>
-            <ul><Cake cake = {cakes[1]}/></ul>
-            <ul><Cake cake = {cakes[2]}/></ul>
-        </ul>
-    
+            <h1>Cakes:</h1>
+            <br />
+            <p>Average Rating: </p>
+            <p>Bakery Till: </p>
+
         </>
     )
 }
